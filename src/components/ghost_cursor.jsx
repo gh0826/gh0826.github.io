@@ -103,7 +103,7 @@ const GhostCursor = ({
       vec2 r = vec2(fbm(p * iScale + q * 1.5 + iTime * 0.15), fbm(p * iScale + q * 1.5 + vec2(8.3,2.8) + iTime * 0.15));
 
       float smoke = fbm(p * iScale + r * 0.8);
-      float radius = 0.5 + 0.3 * (1.0 / iScale);
+      float radius = (0.5 + 0.3 * (1.0 / iScale)) * 0.2;
       float distFactor = 1.0 - smoothstep(0.0, radius * activity, length(p - mousePos));
       float alpha = pow(smoke, 2.5) * distFactor;
 
@@ -418,10 +418,6 @@ const GhostCursor = ({
       currentMouseRef.current.set(x, y);
       pointerActiveRef.current = true;
       lastMoveTimeRef.current = performance.now();
-      ensureLoop();
-    };
-    const onPointerEnter = () => {
-      pointerActiveRef.current = true;
       ensureLoop();
     };
     const onPointerLeave = () => {

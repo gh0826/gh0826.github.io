@@ -1,205 +1,228 @@
 export default function About() {
   return (
-    <div className="max-w-7xl mx-auto">
-      {/* Dashboard Header / Profile Section */}
-      <section className="mb-12 relative bg-[#f0f2f5] p-8 rounded-xl shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] overflow-hidden">
-        {/* Screws */}
-        <div className="screw-head screw-tl"></div>
-        <div className="screw-head screw-tr"></div>
-        <div className="screw-head screw-bl"></div>
-        <div className="screw-head screw-br"></div>
-        <div className="flex flex-col md:flex-row gap-12 items-center">
-          {/* CRT Avatar Placeholder */}
-          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-xl shadow-[inset_4px_4px_10px_#d1d9e6,inset_-4px_-4px_10px_#ffffff] bg-[#d1d9e6] flex items-center justify-center p-4 border-4 border-[#e0e5ec]">
-            <div className="w-full h-full bg-[#1a1c1e] rounded-lg relative overflow-hidden flex items-center justify-center">
-              <div className="crt-scanlines absolute inset-0 opacity-40"></div>
-              <div className="z-10 text-primary font-['JetBrains_Mono'] text-[10px] font-bold animate-pulse">SYSTEM_ACTIVE</div>
+    <div className="space-y-24">
+      {/* Personal Hero Card */}
+      <section className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+          <div className="pebble-shape bg-energy opacity-20 absolute inset-0 rotate-6" />
+          <div className="pebble-shape w-full h-full overflow-hidden moss-shadow border border-border/10 bg-surface-container-highest">
+            <img
+              alt="个人头像占位"
+              className="w-full h-full object-cover mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkPkUDjgVJzQoHh_smiUiJTy0arr8jSF43_qhQZbG-DYqWQDSMQdEcG1xE4-85FZzyETpmuXT-vcQgyLC9RHNoncSVnnEvo4hK8fppkUDr8Hwd4v5H71woROBd6AZhfNrSvUYXfiCUqKEtTR-za62vJhbEGT-Huadjg1nE241kmKtLbjo-sGqJuzeUoxFfiultNaay92fiSkx0-x-nyuggCBePwi4EQ7CExrsnhxezll0TwwPTC3vfb7X5ie6MNCWMjWF_jRVxwHU"
+            />
+          </div>
+        </div>
+
+        <div className="flex-1 space-y-6">
+          <h1 className="text-6xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface leading-none">
+            能源产品的
+            <span className="italic text-energy">工匠</span>。
+          </h1>
+          <p className="text-xl md:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl">
+            我把电力/新能源/储能的复杂逻辑，翻译成团队能执行的产品能力：指标体系、数据闭环、可控的风险与可靠的上线节奏。
+            让产品既“能用”，也“经得起运行”。
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            {['电网/调度产品', '储能调度', '数据可用性', '可持续指标'].map((t, idx) => (
+              <span
+                key={t}
+                className="px-4 py-1.5 rounded-full bg-surface-container-high border border-border/20 text-sm font-label uppercase tracking-widest"
+                style={{ opacity: idx === 0 ? 1 : 0.92 }}
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Timeline + Sticky Title */}
+      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="lg:col-span-4 sticky top-32">
+          <h2 className="text-4xl font-headline font-semibold text-energy mb-4 italic">
+            能源产品路径
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            按时间记录我的职业演进：从工程理解到产品化表达，再到指标化交付。
+          </p>
+        </div>
+
+        <div className="lg:col-span-8 space-y-16 border-l border-border/20 pl-8 ml-4 lg:ml-0 relative">
+          <div className="relative">
+            <div className="absolute -left-10 top-2 w-4 h-4 rounded-full bg-energy ring-8 ring-background" />
+            <div className="space-y-3">
+              <span className="text-sm font-label tracking-widest text-secondary uppercase">
+                2022 — 至今
+              </span>
+              <h3 className="text-2xl font-headline font-bold">能源数字化产品负责人</h3>
+              <p className="text-on-surface-variant max-w-xl">
+                负责并网与储能相关产品：将业务目标拆成指标与里程碑，建立数据可用性与上线风险控制机制。
+              </p>
+              <ul className="space-y-2 pt-2">
+                <li className="flex items-start gap-2 text-on-surface">
+                  <span className="material-symbols-outlined text-energy text-lg">bolt</span>
+                  <span>推动关键流程上线：上线周期缩短约 30%（示例数据）。</span>
+                </li>
+                <li className="flex items-start gap-2 text-on-surface">
+                  <span className="material-symbols-outlined text-energy text-lg">auto_awesome</span>
+                  <span>建立指标闭环：将人工对账工时减少约 60%（示例数据）。</span>
+                </li>
+              </ul>
             </div>
           </div>
-          {/* Info Panel */}
-          <div className="flex-1 space-y-6">
-            <div className="space-y-1">
-              <span className="font-['JetBrains_Mono'] text-[#ff4757] text-xs font-bold tracking-widest flex items-center">
-                <span className="w-2 h-2 rounded-full bg-[#ff4757] shadow-[0_0_8px_#ff4757] mr-2"></span>
-                SUBJECT_DESIGNATION: ELIAS_VAUGHN
+
+          <div className="relative">
+            <div className="absolute -left-10 top-2 w-4 h-4 rounded-full bg-outline-variant/40 ring-8 ring-background" />
+            <div className="space-y-3">
+              <span className="text-sm font-label tracking-widest text-secondary uppercase">
+                2019 — 2022
               </span>
-              <h1 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-[#2d3436]">Senior Lead Architect &amp; Industrial Systems Optimizer</h1>
+              <h3 className="text-2xl font-headline font-bold">新能源平台架构师</h3>
+              <p className="text-on-surface-variant max-w-xl">
+                参与实时数据链路与业务中台：将告警与仿真结果对齐，提升数据可信度与可解释性。
+              </p>
+              <ul className="space-y-2 pt-2">
+                <li className="flex items-start gap-2 text-on-surface">
+                  <span className="material-symbols-outlined text-energy text-lg">bolt</span>
+                  <span>将告警误报率降低约 40%（示例数据）。</span>
+                </li>
+              </ul>
             </div>
-            <p className="font-body text-secondary leading-relaxed max-w-2xl">
-              Over 12 cycles of experience in high-reliability systems engineering. Specializing in tactile interface design and mechanical logic architectures. I translate complex industrial requirements into resilient, operative software modules.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-[#f0f2f5] px-4 py-2 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] flex items-center space-x-2">
-                <span className="material-symbols-outlined text-xs text-primary">location_on</span>
-                <span className="font-['JetBrains_Mono'] text-[10px] uppercase">NODE: BERLIN_041</span>
-              </div>
-              <div className="bg-[#f0f2f5] px-4 py-2 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] flex items-center space-x-2">
-                <span className="material-symbols-outlined text-xs text-primary">verified</span>
-                <span className="font-['JetBrains_Mono'] text-[10px] uppercase">STATUS: VERIFIED_OP</span>
-              </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -left-10 top-2 w-4 h-4 rounded-full bg-outline-variant/40 ring-8 ring-background" />
+            <div className="space-y-3">
+              <span className="text-sm font-label tracking-widest text-secondary uppercase">
+                2016 — 2019
+              </span>
+              <h3 className="text-2xl font-headline font-bold">电力数据工程师</h3>
+              <p className="text-on-surface-variant max-w-xl">
+                建立时序指标库与数据质量规则：让产品能够“看见”运行状态并做出可控决策。
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bento Layout for Skills and Experience */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Skill Tree Panel */}
-        <div className="lg:col-span-1 bg-[#f0f2f5] p-8 rounded-xl shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] relative">
-          <div className="screw-head screw-tl"></div>
-          <div className="screw-head screw-tr"></div>
-          <h3 className="font-headline font-bold text-lg mb-8 tracking-tight uppercase flex items-center">
-            <span className="material-symbols-outlined mr-2 text-primary">analytics</span>
-            Core_Capacities
-          </h3>
-          <div className="space-y-8">
-            {/* Skill Item */}
-            <div className="space-y-2">
-              <div className="flex justify-between items-end">
-                <span className="font-['JetBrains_Mono'] text-[10px] font-bold uppercase">Logic_Design</span>
-                <span className="font-['JetBrains_Mono'] text-[10px] text-primary">94%</span>
-              </div>
-              <div className="h-4 w-full bg-[#d1d9e6] rounded-sm shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] p-0.5 flex gap-0.5">
-                <div className="h-full w-[94%] bg-primary shadow-[0_0_8px_#ff4757]"></div>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between items-end">
-                <span className="font-['JetBrains_Mono'] text-[10px] font-bold uppercase">React_Engines</span>
-                <span className="font-['JetBrains_Mono'] text-[10px] text-primary">88%</span>
-              </div>
-              <div className="h-4 w-full bg-[#d1d9e6] rounded-sm shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] p-0.5 flex gap-0.5">
-                <div className="h-full w-[88%] bg-primary shadow-[0_0_8px_#ff4757]"></div>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between items-end">
-                <span className="font-['JetBrains_Mono'] text-[10px] font-bold uppercase">Neural_Optics</span>
-                <span className="font-['JetBrains_Mono'] text-[10px] text-primary">72%</span>
-              </div>
-              <div className="h-4 w-full bg-[#d1d9e6] rounded-sm shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] p-0.5 flex gap-0.5">
-                <div className="h-full w-[72%] bg-primary shadow-[0_0_8px_#ff4757]"></div>
-              </div>
-            </div>
-            {/* Modular Blocks Skill Style */}
-            <div className="pt-4">
-              <span className="font-['JetBrains_Mono'] text-[10px] font-bold uppercase block mb-4">Diagnostic_Modules</span>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-[#e0e5ec] p-3 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] flex flex-col items-center justify-center">
-                  <span className="material-symbols-outlined text-primary mb-1">memory</span>
-                  <span className="font-['JetBrains_Mono'] text-[8px] uppercase">RUST_V4</span>
-                </div>
-                <div className="bg-[#e0e5ec] p-3 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] flex flex-col items-center justify-center">
-                  <span className="material-symbols-outlined text-primary mb-1">terminal</span>
-                  <span className="font-['JetBrains_Mono'] text-[8px] uppercase">BASH_SYS</span>
-                </div>
-                <div className="bg-[#e0e5ec] p-3 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] flex flex-col items-center justify-center">
-                  <span className="material-symbols-outlined text-primary mb-1">database</span>
-                  <span className="font-['JetBrains_Mono'] text-[8px] uppercase">SQL_FLOW</span>
-                </div>
-                <div className="bg-[#e0e5ec] p-3 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] flex flex-col items-center justify-center">
-                  <span className="material-symbols-outlined text-primary mb-1">cloud_done</span>
-                  <span className="font-['JetBrains_Mono'] text-[8px] uppercase">AWS_DOCK</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Skills Bento Grid */}
+      <section className="space-y-10">
+        <div className="flex items-center gap-6">
+          <h2 className="text-4xl font-headline font-semibold whitespace-nowrap">能力工坊</h2>
+          <div className="h-[1px] w-full bg-border/20" />
         </div>
 
-        {/* Project Experience / Timeline Panel */}
-        <div className="lg:col-span-2 bg-[#f0f2f5] p-8 rounded-xl shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] relative overflow-hidden">
-          <div className="screw-head screw-br"></div>
-          <div className="screw-head screw-tr"></div>
-          <h3 className="font-headline font-bold text-lg mb-10 tracking-tight uppercase flex items-center">
-            <span className="material-symbols-outlined mr-2 text-primary">history</span>
-            Deployment_Log
-          </h3>
-          <div className="relative space-y-12 pl-10">
-            {/* Timeline Track */}
-            <div className="absolute left-3 top-0 h-full w-1.5 bg-[#d1d9e6] shadow-[inset_1px_1px_3px_rgba(0,0,0,0.1)]"></div>
-            {/* Experience Item */}
-            <div className="relative group">
-              {/* Bolted Marker */}
-              <div className="absolute -left-10 top-1 w-8 h-8 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] bg-[#f0f2f5] border border-[#d1d9e6] flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#ff4757]"></div>
-              </div>
-              <div className="space-y-1 mb-2">
-                <span className="font-['JetBrains_Mono'] text-[10px] text-secondary-500 bg-[#e0e5ec] px-2 py-0.5 rounded shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1)]">2021 - PRESENT</span>
-                <h4 className="font-bold text-xl text-[#2d3436]">Chief Systems Architect @ Industrial Core</h4>
-              </div>
-              <p className="font-body text-sm text-secondary leading-relaxed mb-4">
-                Leading the modernization of legacy terminal interfaces. Reduced operational latency by 42% through strategic modularization of data pathways.
-              </p>
-              {/* Mounted Module Chips */}
-              <div className="flex gap-2">
-                <div className="text-[8px] font-['JetBrains_Mono'] px-2 py-1 border border-primary/20 rounded uppercase">Architecture</div>
-                <div className="text-[8px] font-['JetBrains_Mono'] px-2 py-1 border border-primary/20 rounded uppercase">Core_Logic</div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Frontend */}
+          <div className="bg-surface-container-low p-8 rounded-3xl border border-border/10 space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-energy" aria-hidden>
+                bolt
+              </span>
+              <h3 className="text-xl font-headline font-bold uppercase tracking-wide">能源领域</h3>
             </div>
-            {/* Experience Item */}
-            <div className="relative group">
-              <div className="absolute -left-10 top-1 w-8 h-8 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] bg-[#f0f2f5] border border-[#d1d9e6] flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-[#2d3436] opacity-30"></div>
-              </div>
-              <div className="space-y-1 mb-2">
-                <span className="font-['JetBrains_Mono'] text-[10px] text-secondary-500 bg-[#e0e5ec] px-2 py-0.5 rounded shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1)]">2018 - 2021</span>
-                <h4 className="font-bold text-xl text-[#2d3436]">Interface Engineer @ NexaMachina</h4>
-              </div>
-              <p className="font-body text-sm text-secondary leading-relaxed mb-4">
-                Developed tactile CSS frameworks for next-gen instrumentation panels. Integrated neural feedback systems into operator cockpits.
-              </p>
-              <div className="flex gap-2">
-                <div className="text-[8px] font-['JetBrains_Mono'] px-2 py-1 border border-primary/20 rounded uppercase">HMI_Design</div>
-                <div className="text-[8px] font-['JetBrains_Mono'] px-2 py-1 border border-primary/20 rounded uppercase">Web_Assembly</div>
-              </div>
-            </div>
-            {/* Experience Item */}
-            <div className="relative group">
-              <div className="absolute -left-10 top-1 w-8 h-8 rounded shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] bg-[#f0f2f5] border border-[#d1d9e6] flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-[#2d3436] opacity-30"></div>
-              </div>
-              <div className="space-y-1 mb-2">
-                <span className="font-['JetBrains_Mono'] text-[10px] text-secondary-500 bg-[#e0e5ec] px-2 py-0.5 rounded shadow-[inset_1px_1px_2px_rgba(0,0,0,0.1)]">2015 - 2018</span>
-                <h4 className="font-bold text-xl text-[#2d3436]">Junior Comms Operator @ Signal_Base</h4>
-              </div>
-              <p className="font-body text-sm text-secondary leading-relaxed">
-                Maintained high-availability communication nodes in austere digital environments. Hardened network protocols against packet drift.
-              </p>
+            <div className="space-y-4">
+              {[
+                { label: '并网/调度产品', value: 90 },
+                { label: '储能与新能源业务', value: 85 },
+                { label: '可持续与碳核算', value: 75 },
+              ].map((row) => (
+                <div key={row.label} className="space-y-2">
+                  <div className="flex justify-between text-xs font-label uppercase tracking-tighter">
+                    <span>{row.label}</span>
+                    <span className="text-energy">{row.value}%</span>
+                  </div>
+                  <div className="h-1 bg-border/20 rounded-full overflow-hidden">
+                    <div className="h-full bg-energy" style={{ width: `${row.value}%` }} />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        {/* Contact Panel */}
-        <div className="lg:col-span-3 bg-[#f0f2f5] p-8 rounded-xl shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-6">
-            <div className="w-16 h-16 rounded-full bg-[#d1d9e6] shadow-[inset_3px_3px_6px_#b3bcc9,inset_-3px_-3px_6px_#ffffff] flex items-center justify-center">
-              <span className="material-symbols-outlined text-primary text-3xl">emergency_share</span>
+          {/* UI/UX */}
+          <div className="bg-surface-container-high p-8 pebble-shape-alt rounded-3xl border border-border/10 space-y-6">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-secondary" aria-hidden>
+                insights
+              </span>
+              <h3 className="text-xl font-headline font-bold uppercase tracking-wide">产品与增长</h3>
             </div>
-            <div>
-              <h3 className="font-headline font-bold text-2xl tracking-tight uppercase">Initiate_Handshake</h3>
-              <p className="font-body text-secondary text-sm">Open channel for collaboration or technical inquiries.</p>
+            <div className="flex flex-wrap gap-2">
+              {['产品路线图', '用户研究', '运营指标', '商业化节奏', 'A/B 验证'].map((t) => (
+                <span
+                  key={t}
+                  className="bg-surface-container-lowest px-3 py-1 rounded-full text-sm border border-border/10"
+                >
+                  {t}
+                </span>
+              ))}
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto">
-            {/* Recessed Input Style Wells for Info */}
-            <div className="bg-[#d1d9e6] p-4 rounded shadow-[inset_3px_3px_6px_#b3bcc9,inset_-3px_-3px_6px_#ffffff] min-w-[240px]">
-              <span className="font-['JetBrains_Mono'] text-[8px] text-primary uppercase block mb-1">COMM_ADDR</span>
-              <span className="font-['JetBrains_Mono'] text-sm font-bold">ELIAS@OPERATOR.IO</span>
+
+          {/* Tooling */}
+          <div className="bg-surface-container-highest p-8 rounded-3xl border border-border/10 space-y-6 moss-shadow">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-energy" aria-hidden>
+                data_usage
+              </span>
+              <h3 className="text-xl font-headline font-bold uppercase tracking-wide">平台与数据</h3>
             </div>
-            {/* Primary Physical Key Button */}
-            <button className="bg-[#ff4757] text-white px-10 py-5 rounded-lg shadow-[6px_6px_12px_#d1d9e6,-6px_-6px_12px_#ffffff] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] active:translate-y-1 transition-all duration-150 font-headline font-bold uppercase tracking-widest text-lg flex items-center justify-center group">
-              CONTACT_ME
-              <span className="material-symbols-outlined ml-3 group-hover:translate-x-1 transition-transform">bolt</span>
-            </button>
-          </div>
-          {/* Ventilation Slots Aesthetic */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
-            <div className="h-1 w-12 bg-[#d1d9e6] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.2)] rounded-full"></div>
-            <div className="h-1 w-12 bg-[#d1d9e6] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.2)] rounded-full"></div>
-            <div className="h-1 w-12 bg-[#d1d9e6] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.2)] rounded-full"></div>
+            <div className="grid grid-cols-2 gap-4">
+              {['实时指标平台', '时序数据与告警', 'API/集成', '权限与审计'].map((t) => (
+                <div key={t} className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-sm opacity-60" aria-hidden>
+                    check_circle
+                  </span>
+                  <span className="text-sm">{t}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Interests */}
+      <section className="max-w-2xl mx-auto text-center space-y-8">
+        <h2 className="text-2xl font-headline font-medium italic opacity-60">下班后的能量补给</h2>
+        <div className="flex justify-center gap-4">
+          <div className="flex flex-col items-center gap-2 group">
+            <div className="w-16 h-16 pebble-shape bg-surface-container-low flex items-center justify-center border border-border/10 group-hover:bg-energy/10 transition-colors">
+              <span className="material-symbols-outlined text-energy" aria-hidden>
+                bolt
+              </span>
+            </div>
+            <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">
+              观测与调试
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-2 group">
+            <div className="w-16 h-16 pebble-shape-alt bg-surface-container-low flex items-center justify-center border border-border/10 group-hover:bg-secondary/10 transition-colors">
+              <span className="material-symbols-outlined text-secondary" aria-hidden>
+                psychology
+              </span>
+            </div>
+            <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">
+              产品直觉
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-2 group">
+            <div className="w-16 h-16 pebble-shape bg-surface-container-low flex items-center justify-center border border-border/10 group-hover:bg-energy/10 transition-colors">
+              <span className="material-symbols-outlined text-energy" aria-hidden>
+                nature
+              </span>
+            </div>
+            <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant">
+              慢生活与复盘
+            </span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | The Living Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#f9f3e9",
+                        "on-primary-fixed-variant": "#3a4c30",
+                        "primary-fixed-dim": "#b8cda9",
+                        "tertiary-container": "#716a5e",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1d1b16",
+                        "surface-container-highest": "#e8e2d9",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eee7de",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ebe1d2",
+                        "on-background": "#1d1b16",
+                        "surface-variant": "#e8e2d9",
+                        "secondary-fixed-dim": "#f6bb88",
+                        "on-secondary-fixed-variant": "#663d15",
+                        "tertiary": "#585246",
+                        "surface-tint": "#516447",
+                        "on-primary-container": "#ddf3cd",
+                        "surface-bright": "#fff8ef",
+                        "inverse-surface": "#33302a",
+                        "on-primary-fixed": "#0f1f09",
+                        "on-secondary-container": "#794e25",
+                        "outline-variant": "#c4c8bd",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "tertiary-fixed-dim": "#cfc5b7",
+                        "on-secondary-fixed": "#2e1500",
+                        "secondary-fixed": "#ffdcc1",
+                        "secondary-container": "#ffc38f",
+                        "secondary": "#81542b",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#444840",
+                        "primary": "#45573b",
+                        "inverse-on-surface": "#f6f0e7",
+                        "surface": "#fff8ef",
+                        "primary-fixed": "#d4e9c4",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "background": "#fff8ef",
+                        "surface-container": "#f3ede4",
+                        "outline": "#74786f",
+                        "on-tertiary-container": "#f6ebdc",
+                        "surface-dim": "#dfd9d0",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#5d7052",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b8cda9"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDC8Fx4l-edSUhBB-qCVU1YwlHifRIpChjL-sIOxXycUNCt36x64YvRYlxLBmgKpccwuKYbVwy6gdVAG98Q6ShsJNHMQAW0GbPaIX8wBfzjS8xE1xAyJoQcCQj8Qm-ZoxWV_cKfPPA8kgI0nYAjOLNphrcdJTKr2iB9GwUSd3qYRMG2hqBg-yppELDLyGLQKTPxM2zWW8EhEw3i97zVPqUheU7nZp2JSicB16yPNVKFX4JErRJhUDPZ25MbfXAbV2v2-8zSPZ0SJo8);
+    mix-blend-mode: multiply
+    }
+.pebble-shape {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+.pebble-shape-alt {
+    border-radius: 40% 60% 70% 30%/30% 60% 40% 70%
+    }
+.moss-shadow {
+    box-shadow: 0 10px 30px -5px rgba(93, 112, 82, 0.12)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="paper-grain"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center w-full">
+<nav class="bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-md rounded-full mt-4 mx-auto max-w-fit px-6 py-2 border border-stone-200/30 dark:border-stone-700/30 shadow-[0_10px_30px_-5px_rgba(93,112,82,0.12)] flex items-center gap-8">
+<div class="font-serif font-extrabold text-2xl text-emerald-900 dark:text-emerald-100 mr-4">The Living Editorial</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform active:scale-95 duration-200 ease-in-out" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform active:scale-95 duration-200 ease-in-out" href="#">About</a>
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700/50 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform active:scale-95 duration-200 ease-in-out" href="#">Projects</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform active:scale-95 duration-200 ease-in-out" href="#">Blog</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform active:scale-95 duration-200 ease-in-out" href="#">Contact</a>
+</div>
+<button class="p-1 text-stone-600 dark:text-stone-400 hover:text-emerald-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Section Header -->
+<section class="mb-20 text-center md:text-left">
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold text-primary mb-6 tracking-tight">Projects</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed opacity-80">
+                A curated selection of digital artifacts, built with a focus on tactile interaction, organic growth, and the quiet beauty of functional design.
+            </p>
+</section>
+<!-- Filtering Row -->
+<nav aria-label="Project filters" class="flex flex-wrap gap-4 mb-16 justify-center md:justify-start">
+<button class="px-8 py-3 rounded-full bg-primary text-on-primary font-label text-sm tracking-widest uppercase transition-transform hover:scale-105 moss-shadow">All</button>
+<button class="px-8 py-3 rounded-full bg-surface-container-high text-primary font-label text-sm tracking-widest uppercase transition-colors hover:bg-surface-container-highest border border-outline/10">Frontend</button>
+<button class="px-8 py-3 rounded-full bg-surface-container-high text-primary font-label text-sm tracking-widest uppercase transition-colors hover:bg-surface-container-highest border border-outline/10">UI/UX</button>
+<button class="px-8 py-3 rounded-full bg-surface-container-high text-primary font-label text-sm tracking-widest uppercase transition-colors hover:bg-surface-container-highest border border-outline/10">Writing</button>
+</nav>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+<!-- Card 1 -->
+<article class="group relative flex flex-col bg-surface-container-low p-8 pebble-shape moss-shadow border border-outline/5 hover:scale-[1.02] transition-transform duration-500">
+<div class="aspect-[4/3] mb-8 overflow-hidden pebble-shape-alt bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" data-alt="Abstract mossy green and earth tones minimalist digital art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZdf7zaXxBcFkkX70oRxo83G_KEh3rTktteEuDLo1LEVWhbzVa2Km7aUrtTG5a_-3lF4Im06-92DFmh67TC658Bz-a3WmC_DabOSgOrZTwIV4F5xzgPOiuIVT6oC3hqYMLHw0qbEzGHljbaTs4hxS4U6LRgyyh2azBCxuoYEZBDkw-V_odpCWJUb2A9b4_aYj0C4TAv4wuwf_UiT4_d5lak_oNO755h2dY-tXjrfaOG6fByBaZuMrEzmy0UWKX8E5r7vEDEmUnmA"/>
+</div>
+<div class="flex-grow">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-3 block">Lead Designer</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Lichen Design System</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">React</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Tailwind</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Figma</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group-hover:text-secondary transition-colors uppercase tracking-widest" href="#">
+                    View details
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Card 2 -->
+<article class="group relative flex flex-col bg-surface-container p-8 pebble-shape-alt moss-shadow border border-outline/5 hover:scale-[1.02] transition-transform duration-500 mt-0 lg:mt-12">
+<div class="aspect-[4/3] mb-8 overflow-hidden pebble-shape bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" data-alt="Soft sunset over textured landscape with grain effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD15U1AvrmfaNI1dYBkQjHIv3jJe0iCWGPe2WD_yfz_HHVHi4lShddy3hrsmjM_NeKYc-7vq3aTPU2Aw4Bjl6DGzC6Kk26l4TfB5Ryoi8AvNa0dYV48OJhknTo0nUtLS9GjbG2XSNaKqZiv96K4Ao3SGL0UExh3cjwx8bIWLv1ohRmBTkI8e7IFihAxfCNnduTLqHUOc0Uey5OR1taFKUm6K4HmHQoa7mez0fCjACQsHxdMEQYXtVOVzBvc74KruUzfOiUFLNMErzY"/>
+</div>
+<div class="flex-grow">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-3 block">Fullstack Developer</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">The Moss Journal</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Next.js</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Sanity CMS</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group-hover:text-secondary transition-colors uppercase tracking-widest" href="#">
+                    View details
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Card 3 -->
+<article class="group relative flex flex-col bg-surface-container-low p-8 pebble-shape moss-shadow border border-outline/5 hover:scale-[1.02] transition-transform duration-500">
+<div class="aspect-[4/3] mb-8 overflow-hidden pebble-shape-alt bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" data-alt="Macro photo of dewdrops on a green leaf with depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuR_fR0KwaehTCDH-9Hm057FpwOxJUnSAzTgv59H46mz4KwEjvKH_Vb_KByZwn314YRDVz1nj9E3RlPPzskYdLw6PcuQI7qTs-KDpJCPVvUi6ycwvd6O4JyrJ941Q3-5PBivS0pQBFAU3qDrrtfIXl-f1vrjEj8UZsGTm3FB9y50qtpyszgr81DbzbSZzd9EFEN6WMJeUsAHjmbIUlka5upolb8bpuxA9erlCmDAM2Y6ch37bIRvxeZ9hqJlDKTqhHAsMq-rizdco"/>
+</div>
+<div class="flex-grow">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-3 block">UI Designer</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Bloom Interface</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Framer</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">SVG Animation</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group-hover:text-secondary transition-colors uppercase tracking-widest" href="#">
+                    View details
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Card 4 -->
+<article class="group relative flex flex-col bg-surface-container p-8 pebble-shape-alt moss-shadow border border-outline/5 hover:scale-[1.02] transition-transform duration-500">
+<div class="aspect-[4/3] mb-8 overflow-hidden pebble-shape bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" data-alt="Abstract flowing liquid paint in shades of cream and olive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf51JNMBIFv0JgcJRZQyQAP_hx2j0m5GQ4j5zBbC3y9pzupTsa2dXkQ2bXnUJ_cFMq_h3DJBnHJhC6vWBcjUZ18f9fz4AAEf96sS-2dSm5FSGAhdWba6QY9QX4Y7JExt8LIgNAnTmTDchtm9S-t36h_3KNhAdAv8oY6JRFxU4JSDZPb6MZGa3FoOz7JYlJQOkwvWg2flAhdE_1FxecGbkmbLOQxapsynoZnoapasScx1OS_lsXwirgWWvvdvyIOx4L2HKsQPMrbBk"/>
+</div>
+<div class="flex-grow">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-3 block">Visual Strategist</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Earthen Archives</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Branding</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Typography</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group-hover:text-secondary transition-colors uppercase tracking-widest" href="#">
+                    View details
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Card 5 -->
+<article class="group relative flex flex-col bg-surface-container-low p-8 pebble-shape moss-shadow border border-outline/5 hover:scale-[1.02] transition-transform duration-500 mt-0 lg:mt-12">
+<div class="aspect-[4/3] mb-8 overflow-hidden pebble-shape-alt bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" data-alt="Majestic mountain range under a soft hazy sky at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABrTv-C7JVdHvjQMpDW5qzc_-QqBZ6KQcYFCqcT0bMkQBqqfz-wMJPr9aQSj2-TSB0m2mysmGaSlRFBliSSZAY6qkhGolAMvBWhwBcigSXmJrwi7Yx576__W51qLxW0L7UdhbBIq8_Hu0wuewaZZDWCWcPGV_gwodJYkYXWF_Hy01AyQvCy8GQNYz_1tty1dlBkkWFi6GBFijNY89flqDrRf-zkHCH5JOOc61RUtgEXLeIm8yjv3PUZO0pxhmUZ4v2vX27tkknRAY"/>
+</div>
+<div class="flex-grow">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-3 block">Creative Technologist</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Peak Analytics</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">D3.js</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Vue</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Python</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group-hover:text-secondary transition-colors uppercase tracking-widest" href="#">
+                    View details
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Card 6 -->
+<article class="group relative flex flex-col bg-surface-container p-8 pebble-shape moss-shadow border border-outline/5 hover:scale-[1.02] transition-transform duration-500">
+<div class="aspect-[4/3] mb-8 overflow-hidden pebble-shape-alt bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist architectural shapes with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCln_m8qNMgLvURv3-rqA-1Tp8ahtMXNNEx3hOyOQ_seV4UOBAeF9zRbE-C7LrMNaf2epQVvSFu6oGr-7Lmh2m21vQf9adKkvp8H1jedeuX_nhNTBOsbOlj4GDcYHL4BwQmeE4fngq7fBqO4i0wRZYBXEURP86XTUYekValjaUucoWx2hJBRlB4YmxCn5le1UODN_zuFZ_Rymr5QTpe4g-ETBdn9Yqe3Fz_f6ZNuBAIwurv_ZrESgaCHx8tTNiphqVSNX1qgLNkQYY"/>
+</div>
+<div class="flex-grow">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary mb-3 block">Lead Writer</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">The Paper Trail</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Editorial</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface-variant text-xs font-medium rounded-full border border-outline/10">Strategy</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group-hover:text-secondary transition-colors uppercase tracking-widest" href="#">
+                    View details
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full max-w-7xl mx-auto p-12 mt-20 flex flex-col items-center gap-6 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] mb-8 mx-4 bg-[#FDFCF8] dark:bg-stone-950 border border-[#DED8CF]/50 dark:border-stone-800">
+<div class="font-serif text-xl text-emerald-900 dark:text-emerald-100">The Living Editorial</div>
+<div class="flex gap-8">
+<a class="text-stone-500 font-sans text-sm font-medium tracking-wide uppercase hover:text-emerald-600 transition-colors" href="#">Next.js</a>
+<a class="text-stone-500 font-sans text-sm font-medium tracking-wide uppercase hover:text-emerald-600 transition-colors" href="#">Tailwind CSS</a>
+<a class="text-stone-500 font-sans text-sm font-medium tracking-wide uppercase hover:text-emerald-600 transition-colors" href="#">Framer Motion</a>
+</div>
+<p class="text-stone-800 dark:text-stone-200 font-sans text-sm font-medium tracking-wide uppercase opacity-60">© 2024 The Living Editorial. Grown with care.</p>
+</footer>
+</body></html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&amp;family=Nunito:wght@400;600;700&amp;family=Newsreader:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#f9f3e9",
+                        "on-primary-fixed-variant": "#3a4c30",
+                        "primary-fixed-dim": "#b8cda9",
+                        "tertiary-container": "#716a5e",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1d1b16",
+                        "surface-container-highest": "#e8e2d9",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eee7de",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ebe1d2",
+                        "on-background": "#1d1b16",
+                        "surface-variant": "#e8e2d9",
+                        "secondary-fixed-dim": "#f6bb88",
+                        "on-secondary-fixed-variant": "#663d15",
+                        "tertiary": "#585246",
+                        "surface-tint": "#516447",
+                        "on-primary-container": "#ddf3cd",
+                        "surface-bright": "#fff8ef",
+                        "inverse-surface": "#33302a",
+                        "on-primary-fixed": "#0f1f09",
+                        "on-secondary-container": "#794e25",
+                        "outline-variant": "#c4c8bd",
+                        "on-tertiary-fixed-variant": "#4c463b",
+                        "tertiary-fixed-dim": "#cfc5b7",
+                        "on-secondary-fixed": "#2e1500",
+                        "secondary-fixed": "#ffdcc1",
+                        "secondary-container": "#ffc38f",
+                        "secondary": "#81542b",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#444840",
+                        "primary": "#45573b",
+                        "inverse-on-surface": "#f6f0e7",
+                        "surface": "#fff8ef",
+                        "primary-fixed": "#d4e9c4",
+                        "on-tertiary-fixed": "#1f1b12",
+                        "background": "#fff8ef",
+                        "surface-container": "#f3ede4",
+                        "outline": "#74786f",
+                        "on-tertiary-container": "#f6ebdc",
+                        "surface-dim": "#dfd9d0",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#5d7052",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b8cda9"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Fraunces", "serif"],
+                        "sans": ["Nunito", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCg1K5Fkv_RlBZkeqeyZqLxoyVWVE5ZtxBv6YKEzbXE9ZTw8_-Xp04t1fnGd2QTKxNsCxQnm-fcS5ozqJBeLlcGcGBfFOhX6yh41yel17J20foisRpsMa3C00vmgpW7G6VIBJHhjaX_zHH2ySCgzZHD3HpdU__hZ6wIBHJUqQfkVDQ91pmFgbZsTvCHfoCEkFTGiaK-7Cr_XznjR4fFrOgGiCV46dtttkYQ3wR80aE8HcmqegBJC9rSzpjwKbPrtsOJn-czQhgcLQk);
+    mix-blend-mode: multiply
+    }
+.pebble-shape {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.editorial-shadow {
+    box-shadow: 0 10px 30px -5px rgba(93, 112, 82, 0.12)
+    }
+.no-scrollbar::-webkit-scrollbar {
+    display: none
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed transition-colors duration-300">
+<div class="noise-overlay"></div>
+<!-- Navigation Shell (TopAppBar) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center w-full">
+<nav class="bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-md rounded-full mt-4 mx-auto max-w-fit px-6 py-2 border border-stone-200/30 dark:border-stone-700/30 shadow-[0_10px_30px_-5px_rgba(93,112,82,0.12)] flex items-center gap-8">
+<span class="font-serif font-extrabold text-2xl text-emerald-900 dark:text-emerald-100">The Living Editorial</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Home</a>
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">About</a>
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Projects</a>
+<a class="font-serif font-bold text-lg tracking-tight text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700/50 hover:scale-105 transition-transform" href="#">Blog</a>
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Contact</a>
+</div>
+<button class="text-emerald-800 dark:text-emerald-400">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Featured Highlight Area -->
+<section class="mb-24">
+<div class="relative group overflow-hidden rounded-xl bg-surface-container-low editorial-shadow flex flex-col md:flex-row items-stretch border border-outline/10">
+<div class="md:w-3/5 overflow-hidden">
+<img alt="Featured article thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Top view of a desk with an open notebook and coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOJNBwsTCAIXxdcdnCDp_kFudrjilCtX-XyNrEREgHcioi-4Cj4HTkrGTRM0868V6Bw4AUAg3gr5hkQ5kOMkshRGPe4YKL80yfJQhgJNYPYbGVI7bWj7kGi0FPTakXzLn57Pwpe7csRKrrGXYwiaW_h2HmhKzZj_zBQo1klaC0AIylYy2KGQbFrm-wKnSK5qtSPjg1Qy7ZTtnHXOU_cvkRxppWyBAEmSiPjChBISpqpRDWsrayGwsh7seETFtr0UpkEI-zr_S_kQ4"/>
+</div>
+<div class="md:w-2/5 p-12 flex flex-col justify-center bg-surface-container-low">
+<span class="font-label text-xs tracking-[0.2em] text-secondary uppercase mb-4">Featured Essay</span>
+<h1 class="font-serif text-4xl md:text-5xl font-extrabold text-on-surface leading-tight mb-6">The Art of Slow Curation in a Fast World</h1>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8">Exploring why we need more intentional spaces in digital landscapes, and how craftsmanship survives in the age of automation.</p>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform editorial-shadow" href="#">Read Article</a>
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest">12 min read</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">
+<!-- Article 1 -->
+<article class="flex flex-col group">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-outline/10 editorial-shadow">
+<img alt="Blog thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Old library with dusty books and sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2-DO1KJawcuLsjXkVuUbrXZOYPNPV4D5sW7qyXAB9LCV6fnHUJWDS2L6BWNwnA-O6K0y-S-bOWpKcUthrM0YQPpIo6TLNt8_KGJRRLS8CWj439U3smO07Wl4N_sYTEsS_7OuiqPf5CRDRoPUgkC3ZofANKQj1TeuCbc3T3EDh612LsX2tYx9nHBHBn9JqHzqG4g6DDje-kYsneH5FyAY8dgBFeXnUgowZke46Eoa36DknyIR1MpWZb373xL2otJJlRKsoyy3Q2q8"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Philosophy</span>
+<span class="text-on-surface-variant text-xs">Oct 24, 2023</span>
+</div>
+<h3 class="font-serif text-2xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors">Wabi-Sabi: Finding Perfection in the Flawed</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 line-clamp-3">In a world obsessed with smooth edges and pixel-perfect results, there's a profound relief in embracing the organic texture of real life.</p>
+<a class="mt-auto flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                    Read <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Article 2 -->
+<article class="flex flex-col group">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-outline/10 editorial-shadow">
+<img alt="Blog thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern typography on a vintage poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRZRE6l1iaqW1agmXUetSEwqh4M1V-b22lZf4JSYgR9fB0dEGUjS0nKKlxh24HhNXtYbinJPiTC7XEcbyi0-xyNNG0SLWnPk7eTdX5_mHsr7OiFGzp9gZCsK7jFmA9BFVBB2bEtVkxs-yD3UgRLZL3_b4oR2Skc4yFEp0B3s8g0m07cpRbwxSCLEJq-W_RLqtVwvE0HYo_nRcby20LajkUu4o_Bp4wPad2viQXm7P4uC477miFG8D_yYvHjDzu9FL4PgWX37sFvVk"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Design</span>
+<span class="text-on-surface-variant text-xs">Nov 12, 2023</span>
+</div>
+<h3 class="font-serif text-2xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors">Why Your UI Needs More Breathing Room</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 line-clamp-3">Space isn't empty; it's a structural element that guides the soul. Let's look at how white space creates luxury in digital environments.</p>
+<a class="mt-auto flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                    Read <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Article 3 -->
+<article class="flex flex-col group">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-outline/10 editorial-shadow">
+<img alt="Blog thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Handcrafted pottery on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmKsEOKg3lbRXOuiUIx10m4RGnYxsft6he91ujFN91TLSNjOxGjHFC87QazinktnNOSYGmoBwXgDzJLPGVWk2IVoCIePH4bGIcVzZXtuyPkSwFjvvmxArp5MssM6RzPca5qIwrF4bFTybogZijt-OnA12vb-r4L78xRLZ4OpJKhg6Xn3gQRIxBUWp2NUwc1uRpoCay34eNXSSHu907z5MKL1mJRZLbC_h5RxeZPBHE4xNjtcUC8d1fWv-ZsuzQGi8zlhvMD_9qrPs"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Craft</span>
+<span class="text-on-surface-variant text-xs">Dec 02, 2023</span>
+</div>
+<h3 class="font-serif text-2xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors">Tactile Digital: Mimicking the Physical</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 line-clamp-3">How we use shadows, noise, and organic shapes to make our screens feel like something you could reach out and touch.</p>
+<a class="mt-auto flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                    Read <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Article 4 -->
+<article class="flex flex-col group">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-outline/10 editorial-shadow">
+<img alt="Blog thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract green moss texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFHgn6HXWRmf6B0jsW_tVIY4Aq5bg33DQPJgJSr21B22yci-VPpDsBdktuOH86NrYGXV5qX1M4H-eXPEIghKFNwY-bsBaKjG0gnvZaj45WYiHWu1oJ0a1Wio8vhzZ4G9YZJqmyyNT7paIZIakIJF89Y6TNMOfcz44x1Fdg_BmR_hQgM71iqXNFo8_sSfajRjKs5mjGMUhBk15bUPncEI4YCK6CH5o8EDwuMVQcB2ouu_yaAjxrbbTOwfXLVukLxVsSFW45H3awOq4"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Nature</span>
+<span class="text-on-surface-variant text-xs">Jan 15, 2024</span>
+</div>
+<h3 class="font-serif text-2xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors">The Green Palette: Designing for Calm</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 line-clamp-3">Moss, forest, and sage. Why earth-toned palettes are the future of mental-health-conscious software design.</p>
+<a class="mt-auto flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                    Read <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Article 5 -->
+<article class="flex flex-col group">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-outline/10 editorial-shadow">
+<img alt="Blog thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Antique typewriter on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3CNZXLJy6_N2bPIDq0iv8W1PBSQjinzkE-Fsisa52xSj_5v9lD_CLtDkDt3YjAMJuwcUn1ZvhIx_Mmfxk91EKHi_NuBBHkBj4nDSF85rvMpPeVm4SKcXps-nyjlb2R_twSzP5KeWnlHUpD1qE58mQd8oYgnRNO8043-seHN1YBCZqPft86UCzgdWTBzXeZzUZkB4j5GtIf_yyOmH_2MuwAajAEuDVW-4D0U5JOeGgtg7XbdKM7QJpOo_LeyWk7cR5Fo2AiVro-Fk"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Lifestyle</span>
+<span class="text-on-surface-variant text-xs">Feb 10, 2024</span>
+</div>
+<h3 class="font-serif text-2xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors">Writing for Humans, Not Algorithms</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 line-clamp-3">A guide to editorial voice in a world flooded with AI content. How to keep your personality alive in every sentence.</p>
+<a class="mt-auto flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                    Read <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+<!-- Article 6 -->
+<article class="flex flex-col group">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-6 border border-outline/10 editorial-shadow">
+<img alt="Blog thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A person drawing in a sketchbook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8k1SNf0_QLDYWXmZ02XtWIiI-tOTpBc6JnsUUdPyPlSbPEbPlF_HvHSkH-GQJUimcugvPbywdr92WYSeFh_oMSdDn2KaJ8qhja-2fMmrwWloEBZoyII23fAkZPL38vj7WG70sU7K-o_iq3-FGFqe42kwz7u3aXC4fg2PqrF8fUgy1Ji4ZwMZz2iC2PDdkaJq8qK5yqE0ed76rEI_ApCZaxiX1OoR77alfyAoXKFZS5CciNoE2Bgw4PogmBdLDHNYui6QtFNdXJc"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Process</span>
+<span class="text-on-surface-variant text-xs">Mar 05, 2024</span>
+</div>
+<h3 class="font-serif text-2xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors">From Sketch to Surface: A Design Odyssey</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 line-clamp-3">Tracing the lifecycle of a design concept from the first pencil stroke to the final interactive prototype.</p>
+<a class="mt-auto flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                    Read <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</article>
+</section>
+<!-- Newsletter & Public Account Section -->
+<section class="max-w-5xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-surface-container-high rounded-xl p-12 editorial-shadow border border-outline/10">
+<div class="space-y-6">
+<h2 class="font-serif text-4xl font-extrabold text-on-surface">Stay in the Fold</h2>
+<p class="text-on-surface-variant font-body leading-relaxed">Subscribe to the monthly editorial for deeper insights, early access to new projects, and curated readings from the intersection of design and slow living.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="bg-surface border-none rounded-full px-6 py-3 focus:ring-2 focus:ring-primary w-full outline-none transition-all placeholder:text-outline-variant font-body" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shrink-0">Join Newsletter</button>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center p-8 bg-surface rounded-xl pebble-shape border border-outline/5 editorial-shadow">
+<div class="w-48 h-48 bg-surface-container-highest rounded-lg mb-6 flex items-center justify-center p-4">
+<!-- QR Code Placeholder -->
+<div class="w-full h-full border-2 border-dashed border-primary/30 rounded flex flex-col items-center justify-center text-primary/40 gap-2">
+<span class="material-symbols-outlined text-4xl" data-icon="qr_code_2">qr_code_2</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter">Follow Updates</span>
+</div>
+</div>
+<p class="font-serif font-bold text-xl text-on-surface mb-2">Follow for updates</p>
+<p class="text-on-surface-variant text-sm font-medium mb-6">@thelivingeditorial</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="link">link</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full max-w-7xl mx-auto p-12 mt-20 flex flex-col items-center gap-6 bg-[#FDFCF8] dark:bg-stone-950 border border-[#DED8CF]/50 dark:border-stone-800 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] mb-8 mx-4">
+<span class="font-serif text-xl text-emerald-900 dark:text-emerald-100">The Living Editorial</span>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Next.js</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Tailwind CSS</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Framer Motion</a>
+</div>
+<div class="flex items-center gap-4 mt-4">
+<div class="w-8 h-[1px] bg-outline-variant"></div>
+<p class="font-sans text-xs text-stone-400">© 2024 The Living Editorial. Grown with care.</p>
+<div class="w-8 h-[1px] bg-outline-variant"></div>
+</div>
+</footer>
+</body></html>

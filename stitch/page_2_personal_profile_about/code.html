@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | The Living Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f9f3e9",
+              "on-primary-fixed-variant": "#3a4c30",
+              "primary-fixed-dim": "#b8cda9",
+              "tertiary-container": "#716a5e",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1d1b16",
+              "surface-container-highest": "#e8e2d9",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#eee7de",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#ebe1d2",
+              "on-background": "#1d1b16",
+              "surface-variant": "#e8e2d9",
+              "secondary-fixed-dim": "#f6bb88",
+              "on-secondary-fixed-variant": "#663d15",
+              "tertiary": "#585246",
+              "surface-tint": "#516447",
+              "on-primary-container": "#ddf3cd",
+              "surface-bright": "#fff8ef",
+              "inverse-surface": "#33302a",
+              "on-primary-fixed": "#0f1f09",
+              "on-secondary-container": "#794e25",
+              "outline-variant": "#c4c8bd",
+              "on-tertiary-fixed-variant": "#4c463b",
+              "tertiary-fixed-dim": "#cfc5b7",
+              "on-secondary-fixed": "#2e1500",
+              "secondary-fixed": "#ffdcc1",
+              "secondary-container": "#ffc38f",
+              "secondary": "#81542b",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-surface-variant": "#444840",
+              "primary": "#45573b",
+              "inverse-on-surface": "#f6f0e7",
+              "surface": "#fff8ef",
+              "primary-fixed": "#d4e9c4",
+              "on-tertiary-fixed": "#1f1b12",
+              "background": "#fff8ef",
+              "surface-container": "#f3ede4",
+              "outline": "#74786f",
+              "on-tertiary-container": "#f6ebdc",
+              "surface-dim": "#dfd9d0",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#5d7052",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#b8cda9"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCxYaq3XXqCIfuPCDYyc441tZN5r2DutENF_XjI3c4GDBrUpFK0WHHfTlPSlG3OyN0dP2zlG1bq9AfIJrJlI2bUTkuuhKfIwB4nicWseEt9WlUYRuMUn26RG-r3VHGTs4DbaFrI_oQSAsaAr5iR_NwCniJHmaQY1dxBbL5kpJ5aQRSX_kVQY39qF7CfIrCnPJDrx-oeNmTFroWWxIDSrGfJQsYveZNhzpRvbNa0quclTgEE6RfVrFe8UkkyqkjP85TI-OrC7MeBZr0)
+    }
+.pebble-shape {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+.pebble-shape-alt {
+    border-radius: 40% 60% 70% 30%/30% 60% 40% 70%
+    }
+.moss-shadow {
+    box-shadow: 0 10px 30px -5px rgba(93, 112, 82, 0.12)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="paper-grain"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center w-full">
+<nav class="bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-md rounded-full mt-4 mx-auto max-w-fit px-6 py-2 border border-stone-200/30 dark:border-stone-700/30 shadow-[0_10px_30px_-5px_rgba(93,112,82,0.12)] flex items-center gap-8">
+<div class="font-serif font-extrabold text-2xl text-emerald-900 dark:text-emerald-100">The Living Editorial</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Home</a>
+<a class="font-serif font-bold text-lg tracking-tight text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700/50 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">About</a>
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Projects</a>
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Blog</a>
+<a class="font-serif font-bold text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Contact</a>
+</div>
+<button class="text-emerald-800 dark:text-emerald-400 material-symbols-outlined" data-icon="menu">menu</button>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-6xl mx-auto space-y-24">
+<!-- Hero Personal Card Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+<div class="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+<div class="pebble-shape bg-primary-fixed absolute inset-0 rotate-6 opacity-20"></div>
+<div class="pebble-shape w-full h-full overflow-hidden moss-shadow border border-outline/10 bg-surface-container-highest">
+<img alt="Personal Portrait" class="w-full h-full object-cover mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up portrait of a creative professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkPkUDjgVJzQoHh_smiUiJTy0arr8jSF43_qhQZbG-DYqWQDSMQdEcG1xE4-85FZzyETpmuXT-vcQgyLC9RHNoncSVnnEvo4hK8fppkUDr8Hwd4v5H71woROBd6AZhfNrSvUYXfiCUqKEtTR-za62vJhbEGT-Huadjg1nE241kmKtLbjo-sGqJuzeUoxFfiultNaay92fiSkx0-x-nyuggCBePwi4EQ7CExrsnhxezll0TwwPTC3vfb7X5ie6MNCWMjWF_jRVxwHU"/>
+</div>
+</div>
+<div class="flex-1 space-y-6">
+<h1 class="text-6xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface leading-none">
+                    A curator of <span class="italic text-primary">digital</span> artifacts.
+                </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl">
+                    I build interfaces that breathe. My work focuses on the intersection of intentional craft and technical performance, seeking to bring a tactile, human quality back to the web.
+                </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high border border-outline/20 text-sm font-label uppercase tracking-widest text-on-surface-variant">Open-source</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high border border-outline/20 text-sm font-label uppercase tracking-widest text-on-surface-variant">Frontend</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high border border-outline/20 text-sm font-label uppercase tracking-widest text-on-surface-variant">UI/UX</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high border border-outline/20 text-sm font-label uppercase tracking-widest text-on-surface-variant">Performance</span>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-4 sticky top-32">
+<h2 class="text-4xl font-headline font-semibold text-primary mb-4 italic">The Path Traveled</h2>
+<p class="text-on-surface-variant leading-relaxed">A chronological look at my professional evolution, from agency roots to product-led environments.</p>
+</div>
+<div class="lg:col-span-8 space-y-16 border-l-2 border-outline/10 pl-8 ml-4 lg:ml-0 relative">
+<!-- Timeline Items -->
+<div class="relative">
+<div class="absolute -left-10 top-2 w-4 h-4 rounded-full bg-primary ring-8 ring-background"></div>
+<div class="space-y-3">
+<span class="text-sm font-label tracking-widest text-secondary uppercase">2021 — Present</span>
+<h3 class="text-2xl font-headline font-bold">Lead Product Designer</h3>
+<p class="text-on-surface-variant max-w-xl">Spearheading the design system at Echo Labs, focusing on accessibility and developer ergonomics.</p>
+<ul class="space-y-2 pt-2">
+<li class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="auto_awesome">auto_awesome</span>
+<span>Increased conversion by 42% through holistic checkout redesign.</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="auto_awesome">auto_awesome</span>
+<span>Reduced design-to-code handoff time by 60% with a unified token system.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-10 top-2 w-4 h-4 rounded-full bg-outline/40 ring-8 ring-background"></div>
+<div class="space-y-3">
+<span class="text-sm font-label tracking-widest text-secondary uppercase">2018 — 2021</span>
+<h3 class="text-2xl font-headline font-bold">Senior Frontend Engineer</h3>
+<p class="text-on-surface-variant max-w-xl">Architected high-performance web applications for global fashion houses at Canvas Studio.</p>
+<ul class="space-y-2 pt-2">
+<li class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="bolt">bolt</span>
+<span>Achieved average Lighthouse scores of 98+ across all client projects.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-10 top-2 w-4 h-4 rounded-full bg-outline/40 ring-8 ring-background"></div>
+<div class="space-y-3">
+<span class="text-sm font-label tracking-widest text-secondary uppercase">2015 — 2018</span>
+<h3 class="text-2xl font-headline font-bold">Creative Technologist</h3>
+<p class="text-on-surface-variant max-w-xl">Bridges the gap between speculative design and production reality for experiential installations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Bento Grid -->
+<section class="space-y-10">
+<div class="flex items-center gap-6">
+<h2 class="text-4xl font-headline font-semibold whitespace-nowrap">Technical Craft</h2>
+<div class="h-[1px] w-full bg-outline/10"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Frontend -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline/5 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+<h3 class="text-xl font-headline font-bold uppercase tracking-wide">Frontend</h3>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-label uppercase tracking-tighter">
+<span>React / Next.js</span>
+<span class="text-primary">95%</span>
+</div>
+<div class="h-1 bg-outline/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-label uppercase tracking-tighter">
+<span>Tailwind CSS</span>
+<span class="text-primary">100%</span>
+</div>
+<div class="h-1 bg-outline/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[100%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-label uppercase tracking-tighter">
+<span>TypeScript</span>
+<span class="text-primary">80%</span>
+</div>
+<div class="h-1 bg-outline/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[80%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- UI/UX -->
+<div class="bg-surface-container-high p-8 pebble-shape-alt border border-outline/5 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="brush">brush</span>
+<h3 class="text-xl font-headline font-bold uppercase tracking-wide">UI/UX</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-lowest px-3 py-1 rounded-lg text-sm border border-outline/10">Figma Mastery</span>
+<span class="bg-surface-container-lowest px-3 py-1 rounded-lg text-sm border border-outline/10">Typography Systems</span>
+<span class="bg-surface-container-lowest px-3 py-1 rounded-lg text-sm border border-outline/10">Motion Design</span>
+<span class="bg-surface-container-lowest px-3 py-1 rounded-lg text-sm border border-outline/10">Design Tokens</span>
+<span class="bg-surface-container-lowest px-3 py-1 rounded-lg text-sm border border-outline/10">Prototyping</span>
+</div>
+</div>
+<!-- Tooling -->
+<div class="bg-surface-container-highest p-8 rounded-xl border border-outline/5 space-y-6 moss-shadow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
+<h3 class="text-xl font-headline font-bold uppercase tracking-wide">Tooling</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Git / GitHub</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Vercel</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="check_circle">check_circle</span>
+<span class="text-sm">PostgreSQL</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="check_circle">check_circle</span>
+<span class="text-sm">Framer Motion</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interests Section -->
+<section class="max-w-2xl mx-auto text-center space-y-8">
+<h2 class="text-2xl font-headline font-medium italic opacity-60">Off-duty Pursuits</h2>
+<div class="flex justify-center gap-4">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 pebble-shape bg-surface-container-low flex items-center justify-center border border-outline/10 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="forest">forest</span>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Arboriculture</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 pebble-shape-alt bg-surface-container-low flex items-center justify-center border border-outline/10 group-hover:bg-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="menu_book">menu_book</span>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Philosophy</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 pebble-shape bg-surface-container-low flex items-center justify-center border border-outline/10 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="coffee">coffee</span>
+</div>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Raw Ceramics</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full max-w-7xl mx-auto p-12 mt-20 flex flex-col items-center gap-6 bg-[#FDFCF8] dark:bg-stone-950 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] mb-8 mx-4 border border-[#DED8CF]/50 dark:border-stone-800">
+<div class="font-serif text-xl text-emerald-900 dark:text-emerald-100">The Living Editorial</div>
+<div class="flex gap-8">
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Next.js</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Tailwind CSS</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Framer Motion</a>
+</div>
+<p class="font-sans text-sm font-medium tracking-wide uppercase text-stone-800 dark:text-stone-200">© 2024 The Living Editorial. Grown with care.</p>
+</footer>
+</body></html>

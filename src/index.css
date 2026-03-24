@@ -4,13 +4,149 @@
 
 @layer base {
   body {
-    background-color: #e0e5ec;
-    background-image: radial-gradient(#d1d9e6 1px, transparent 1px);
-    background-size: 40px 40px;
+    background-color: #FDFCF8;
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(93, 112, 82, 0.14) 0%, transparent 45%),
+      radial-gradient(circle at 85% 20%, rgba(193, 140, 93, 0.14) 0%, transparent 45%),
+      radial-gradient(circle at 60% 90%, rgba(230, 220, 205, 0.30) 0%, transparent 50%),
+      linear-gradient(rgba(222, 216, 207, 0.25) 1px, transparent 1px);
+    background-size: auto, auto, auto, 24px 24px;
+    background-attachment: fixed;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-grid-overlay,
+  .tech-scanline,
+  .tech-meter-fill,
+  .home-tech-reveal {
+    animation: none !important;
   }
 }
 
 @layer utilities {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Pebble-like asymmetric rounding */
+  .pebble-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  .pebble-shape-alt {
+    border-radius: 40% 60% 70% 30% / 30% 60% 40% 70%;
+  }
+
+  .moss-shadow {
+    box-shadow: 0 10px 30px -5px rgba(93, 112, 82, 0.12);
+  }
+
+  /* Techy motion primitives (used mainly on the Home hero) */
+  .tech-grid-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    z-index: 1;
+    background-image:
+      linear-gradient(to right, rgba(37,99,235,0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(37,99,235,0.18) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(circle at 50% 40%, rgba(0,0,0,1), rgba(0,0,0,0) 70%);
+    animation: techGridShift 9s linear infinite;
+  }
+
+  .tech-scanline {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(90deg, transparent, rgba(37,99,235,0.9), transparent);
+    box-shadow: 0 0 18px rgba(37,99,235,0.35);
+    opacity: 0;
+    animation: techScanMove 3.2s ease-in-out infinite;
+  }
+
+  .tech-meter-fill {
+    background: linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.15) 0%,
+      rgba(37, 99, 235, 0.95) 50%,
+      rgba(37, 99, 235, 0.20) 100%
+    );
+    background-size: 200% 100%;
+    animation: techShimmer 1.8s ease-in-out infinite;
+  }
+
+  .home-tech-reveal {
+    animation: homeRevealUp 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  @keyframes techGridShift {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 280px;
+    }
+  }
+
+  @keyframes techScanMove {
+    0% {
+      top: -10%;
+      opacity: 0;
+    }
+    12% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    100% {
+      top: 110%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes techShimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes homeRevealUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .base-lift {
     box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
   }
@@ -51,8 +187,27 @@
     pointer-events: none;
   }
   .led-active {
-    background-color: #ff4757;
-    box-shadow: 0 0 8px #ff4757, inset 0 0 2px rgba(255,255,255,0.8);
+    background-color: #ec4899;
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.65), inset 0 0 2px rgba(255, 255, 255, 0.9);
+  }
+
+  .cute-card {
+    @apply bg-white/90 backdrop-blur-md rounded-cute-lg border border-pink-100/80 shadow-cute transition-shadow duration-200 ease-out;
+  }
+
+  .cute-card:hover {
+    @apply shadow-cute-hover;
+  }
+
+  .cute-bubble {
+    @apply rounded-full bg-gradient-to-br from-fuchsia-100 via-pink-50 to-amber-50 border border-pink-100/60 shadow-inner;
+  }
+
+  .cute-avatar-ring {
+    box-shadow:
+      0 0 0 4px rgba(255, 255, 255, 0.95),
+      0 0 0 6px rgba(244, 114, 182, 0.25),
+      0 12px 40px rgba(236, 72, 153, 0.15);
   }
   .vent-slot {
     height: 4px;

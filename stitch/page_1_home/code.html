@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Living Editorial | Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-container-low": "#f9f3e9",
+                "on-primary-fixed-variant": "#3a4c30",
+                "primary-fixed-dim": "#b8cda9",
+                "tertiary-container": "#716a5e",
+                "on-secondary": "#ffffff",
+                "on-surface": "#1d1b16",
+                "surface-container-highest": "#e8e2d9",
+                "on-primary": "#ffffff",
+                "surface-container-high": "#eee7de",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#ebe1d2",
+                "on-background": "#1d1b16",
+                "surface-variant": "#e8e2d9",
+                "secondary-fixed-dim": "#f6bb88",
+                "on-secondary-fixed-variant": "#663d15",
+                "tertiary": "#585246",
+                "surface-tint": "#516447",
+                "on-primary-container": "#ddf3cd",
+                "surface-bright": "#fff8ef",
+                "inverse-surface": "#33302a",
+                "on-primary-fixed": "#0f1f09",
+                "on-secondary-container": "#794e25",
+                "outline-variant": "#c4c8bd",
+                "on-tertiary-fixed-variant": "#4c463b",
+                "tertiary-fixed-dim": "#cfc5b7",
+                "on-secondary-fixed": "#2e1500",
+                "secondary-fixed": "#ffdcc1",
+                "secondary-container": "#ffc38f",
+                "secondary": "#81542b",
+                "on-tertiary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-surface-variant": "#444840",
+                "primary": "#45573b",
+                "inverse-on-surface": "#f6f0e7",
+                "surface": "#fff8ef",
+                "primary-fixed": "#d4e9c4",
+                "on-tertiary-fixed": "#1f1b12",
+                "background": "#fff8ef",
+                "surface-container": "#f3ede4",
+                "outline": "#74786f",
+                "on-tertiary-container": "#f6ebdc",
+                "surface-dim": "#dfd9d0",
+                "error-container": "#ffdad6",
+                "surface-container-lowest": "#ffffff",
+                "primary-container": "#5d7052",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#b8cda9"
+              },
+              fontFamily: {
+                "headline": ["Newsreader", "serif"],
+                "body": ["Plus Jakarta Sans", "sans-serif"],
+                "label": ["Plus Jakarta Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .pebble-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .moss-shadow {
+            box-shadow: 0 10px 30px -5px rgba(93, 112, 82, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<div class="noise-overlay"></div>
+<!-- Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center w-full">
+<nav class="bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-md rounded-full mt-4 mx-auto max-w-fit px-6 py-2 border border-stone-200/30 dark:border-stone-700/30 shadow-[0_10px_30px_-5px_rgba(93,112,82,0.12)] flex items-center gap-8">
+<span class="font-serif font-extrabold text-2xl text-emerald-900 dark:text-emerald-100 tracking-tight">The Living Editorial</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700/50 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform" href="#">About</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Projects</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Blog</a>
+<a class="text-stone-600 dark:text-stone-400 font-serif font-bold text-lg tracking-tight hover:scale-105 hover:text-emerald-600 transition-transform" href="#">Contact</a>
+</div>
+<button class="text-emerald-800 dark:text-emerald-400 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-32">
+<!-- Hero Section -->
+<section class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="text-secondary font-label text-sm uppercase tracking-[0.2em]">Curator &amp; Architect</span>
+<h1 class="text-7xl md:text-8xl font-headline font-extrabold text-on-surface leading-[0.9] tracking-tight">
+                        Elias <br/> <span class="text-primary italic">Thorne</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-md leading-relaxed">
+                        Crafting digital spaces with the patience of a gardener and the precision of an editor. Welcome to my living archive.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform moss-shadow">
+                        View Work
+                    </button>
+<button class="border-2 border-secondary text-secondary px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">
+                        Contact Me
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-fixed-dim/30 rounded-full blur-3xl opacity-60"></div>
+<div class="absolute -bottom-12 -right-12 w-72 h-72 bg-secondary-fixed/30 rounded-full blur-3xl opacity-60"></div>
+<div class="relative pebble-shape overflow-hidden bg-surface-container-high border border-outline/10 aspect-[4/5] moss-shadow">
+<img class="w-full h-full object-cover grayscale-[20%] sepia-[10%]" data-alt="Professional portrait of Elias Thorne in warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh3DdK-PUwmzhn5V8wJ8F8XUWHdcSuv-Yx1EJzhk9SFd9jSnEGp4gwA4oEAHO_j0w_Xggy4Dxy-ABKaxKd2KIDYG1UvmpZqShJ3WBKNuisPUdwSZyRe_TZCt0CgL1Nx_1jESfM8QTG4jd_knz70Yxi7fdgofMjY8Npt-JzBOnB9tTBs4uAmoTpxJROYq3VzID0BZzvPcyu1hh0DWruG2mcwAbclX8jIa6RM8qvOQnSjkcd8nJmtn9tZz7RK-V6-uOiTEXu0MWzfJQ"/>
+</div>
+</div>
+</section>
+<!-- Quick Action Row -->
+<section class="flex flex-wrap justify-center gap-6">
+<a class="group flex items-center gap-3 bg-surface-container px-6 py-3 rounded-full border border-outline/20 hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+<span class="font-bold">Projects</span>
+</a>
+<a class="group flex items-center gap-3 bg-surface-container px-6 py-3 rounded-full border border-outline/20 hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<span class="font-bold">Blog</span>
+</a>
+<a class="group flex items-center gap-3 bg-surface-container px-6 py-3 rounded-full border border-outline/20 hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-bold">Resume (PDF)</span>
+</a>
+</section>
+<!-- Highlights Block (Bento Style) -->
+<section class="space-y-12">
+<div class="text-center space-y-2">
+<h2 class="text-4xl font-headline font-semibold">Core Pillars</h2>
+<div class="h-1 w-20 bg-primary/20 mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-12 gap-6 h-full">
+<!-- About Me -->
+<div class="md:col-span-7 bg-surface-container-low p-10 rounded-lg flex flex-col justify-between border border-outline/5 hover:border-outline/20 transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl">fingerprint</span>
+</div>
+<div class="space-y-4 relative z-10">
+<span class="text-primary font-label text-xs uppercase tracking-widest">Legacy</span>
+<h3 class="text-4xl font-headline font-bold">About me</h3>
+<p class="text-on-surface-variant max-w-lg leading-relaxed">
+                            A decade of exploring the intersection between human psychology and digital interfaces. I believe in software that feels like home.
+                        </p>
+</div>
+<a class="mt-8 text-primary font-bold flex items-center gap-2 group" href="#">
+                        Read the full story 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Experience & Skills -->
+<div class="md:col-span-5 bg-surface-container-highest p-10 rounded-xl flex flex-col gap-6 border border-outline/5">
+<h3 class="text-2xl font-headline font-bold">Experience &amp; Skills</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<p class="font-bold text-sm">Systems Architecture</p>
+<p class="text-xs text-on-surface-variant">Building for scale &amp; longevity</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">brush</span>
+</div>
+<div>
+<p class="font-bold text-sm">Editorial Design</p>
+<p class="text-xs text-on-surface-variant">Visual storytelling &amp; typography</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<div>
+<p class="font-bold text-sm">Frontend Engineering</p>
+<p class="text-xs text-on-surface-variant">Modern stacks with performance</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Projects & Writing -->
+<div class="md:col-span-12 bg-surface-dim p-10 rounded-lg border border-outline/5 relative overflow-hidden min-h-[300px] flex items-end">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover opacity-30 grayscale" data-alt="Close up of a minimalist workspace with books and organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kaXKY9JlVAEX8DNuGuryK8a2DK-ZTIO-MHdDUZCvomlx-mg4EmpK66L2XbFR8EAMB_ThDdAU474yk4ArV8Mco8pucVTrNZ0YJ4Xn5511ETorzfvRpkfEeYoT7tPfTueAqxEuJ3AHOXapA75I50c-3PrWvYH6BguqIObcRd9oeSV5Gojfyk1DppDgnCW8sjLj2mqh2F8vD15K1fhUR0LjyqPZZh6Xzz-gZzMwZqXpsZhwgLNK7ZfdIJol0bKuhW9o_RAq-Lw-vMQ"/>
+</div>
+<div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="space-y-2">
+<h3 class="text-4xl font-headline font-bold">Projects &amp; Writing</h3>
+<p class="text-on-surface-variant max-w-xl">
+                                Thoughts on craftsmanship, minimal tech, and a collection of open-source artifacts grown over the years.
+                            </p>
+</div>
+<button class="bg-on-surface text-surface px-8 py-4 rounded-full font-bold hover:bg-primary transition-colors whitespace-nowrap">
+                            Browse Archive
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full max-w-7xl mx-auto p-12 mt-20 flex flex-col items-center gap-6 bg-[#FDFCF8] dark:bg-stone-950 border border-[#DED8CF]/50 dark:border-stone-800 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] mb-8 mx-4">
+<div class="flex flex-col items-center gap-4">
+<span class="font-serif text-xl text-emerald-900 dark:text-emerald-100">The Living Editorial</span>
+<div class="flex gap-8">
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Next.js</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Tailwind CSS</a>
+<a class="font-sans text-sm font-medium tracking-wide uppercase text-stone-500 hover:text-emerald-600 transition-colors" href="#">Framer Motion</a>
+</div>
+</div>
+<p class="text-stone-500 text-xs font-medium uppercase tracking-[0.1em]">© 2024 The Living Editorial. Grown with care.</p>
+</footer>
+</body></html>
