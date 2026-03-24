@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import personImage from '../../docs/person.jpg';
 
 export default function Home() {
   return (
@@ -48,7 +47,7 @@ export default function Home() {
             <img
               className="w-full h-full object-cover grayscale-[20%] sepia-[10%]"
               alt="个人照片"
-              src={personImage}
+              src="/person.jpg"
             />
           </div>
         </div>
